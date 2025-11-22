@@ -1,0 +1,66 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.18.0"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Ocvf",
+      "code_hash": "cd773bc5066a661b72db67de3752f94d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"get-started-with-torchs-modules\">Get started with Torch's modules</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PoAt",
+      "code_hash": "abf1ea42a19ba834e8a6075773c4bca0",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "There is a file named 'torch.py' which conflicts with the imported package. Please rename the file.",
+          "traceback": []
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "\u001b[31m[E 251122 07:32:11 cell_runner:431]\u001b(B\u001b[m There is a file named 'torch.py' which conflicts with the imported package. Please rename the file.\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/tmp/marimo_812663/__marimo__cell_PoAt_.py&quot;</span>, line <span class=\"m\">3</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\">tensordict.nn</span><span class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">TensorDictModule</span>\n  File <span class=\"nb\">&quot;/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/tensordict/__init__.py&quot;</span>, line <span class=\"m\">6</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"kn\">import</span><span class=\"w\"> </span><span class=\"nn\">tensordict._reductions</span>\n  File <span class=\"nb\">&quot;/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/tensordict/_reductions.py&quot;</span>, line <span class=\"m\">11</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\">tensordict._lazy</span><span class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">LazyStackedTensorDict</span>\n  File <span class=\"nb\">&quot;/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/tensordict/_lazy.py&quot;</span>, line <span class=\"m\">38</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\">tensordict._td</span><span class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">_SubTensorDict</span><span class=\"p\">,</span> <span class=\"n\">_TensorDictKeysView</span><span class=\"p\">,</span> <span class=\"n\">TensorDict</span>\n  File <span class=\"nb\">&quot;/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/tensordict/_td.py&quot;</span>, line <span class=\"m\">37</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\">tensordict.base</span><span class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"p\">(</span>\n  File <span class=\"nb\">&quot;/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/tensordict/base.py&quot;</span>, line <span class=\"m\">58</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\">tensordict._contextlib</span><span class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">LAST_OP_MAPS</span>\n  File <span class=\"nb\">&quot;/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/tensordict/_contextlib.py&quot;</span>, line <span class=\"m\">25</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\">torch._dynamo</span><span class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">is_compiling</span>\n<span class=\"gr\">ModuleNotFoundError</span>: <span class=\"n\">No module named &#39;torch._dynamo&#39;; &#39;torch&#39; is not a package</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
+      "id": "FQxo",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    }
+  ]
+}

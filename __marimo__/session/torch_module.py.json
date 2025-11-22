@@ -1,0 +1,87 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.18.0"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "cd773bc5066a661b72db67de3752f94d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"get-started-with-torchs-modules\">Get started with Torch's modules</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "977a3c9673be0b8a5a94893a2656dc2d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TensorDict(\n    fields={\n        RGB: Tensor(shape=torch.Size([10, 144, 192, 3]), device=cpu, dtype=torch.uint8, is_shared=False),\n        agents: TensorDict(\n            fields={\n                action: Tensor(shape=torch.Size([10, 7]), device=cpu, dtype=torch.int64, is_shared=False),\n                logits: Tensor(shape=torch.Size([10, 7, 7]), device=cpu, dtype=torch.float32, is_shared=False),\n                observation: TensorDict(\n                    fields={\n                        RGB: Tensor(shape=torch.Size([10, 7, 3, 88, 88]), device=cpu, dtype=torch.float32, is_shared=False),\n                        vector_obs: Tensor(shape=torch.Size([10, 7, 2]), device=cpu, dtype=torch.float32, is_shared=False)},\n                    batch_size=torch.Size([10, 7]),\n                    device=None,\n                    is_shared=False)},\n            batch_size=torch.Size([10, 7]),\n            device=None,\n            is_shared=False),\n        done: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n        next: TensorDict(\n            fields={\n                RGB: Tensor(shape=torch.Size([10, 144, 192, 3]), device=cpu, dtype=torch.uint8, is_shared=False),\n                agents: TensorDict(\n                    fields={\n                        observation: TensorDict(\n                            fields={\n                                RGB: Tensor(shape=torch.Size([10, 7, 3, 88, 88]), device=cpu, dtype=torch.float32, is_shared=False),\n                                vector_obs: Tensor(shape=torch.Size([10, 7, 2]), device=cpu, dtype=torch.float32, is_shared=False)},\n                            batch_size=torch.Size([10, 7]),\n                            device=None,\n                            is_shared=False),\n                        reward: Tensor(shape=torch.Size([10, 7, 1]), device=cpu, dtype=torch.float64, is_shared=False)},\n                    batch_size=torch.Size([10, 7]),\n                    device=None,\n                    is_shared=False),\n                done: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n                terminated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False)},\n            batch_size=torch.Size([10]),\n            device=None,\n            is_shared=False),\n        terminated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False)},\n    batch_size=torch.Size([10]),\n    device=None,\n    is_shared=False)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "xImu",
+      "code_hash": "abcff169c5486e399804c6eb38298e86",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<img src='./@file/57454-813195-MlqIh7wC.gif' />"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Video Data Shape: (10, 144, 192, 3)\nVideo Data Range: 0 - 255\nVideo Data Type:  uint8\nSaved to rollout.gif\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "SWHO",
+      "code_hash": "6111f6e29f4e49f5241d19f535214407",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 1rem'><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Global View</span></span><img src='./@file/57454-813195-cmso4L4p.gif' /></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 1rem'><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout0.gif</span></span><img src='./@file/38293-813195-1T4EnDMH.gif' /></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout1.gif</span></span><img src='./@file/37395-813195-DW7lt8IL.gif' /></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout2.gif</span></span><img src='./@file/42432-813195-1PZrfVQW.gif' /></div></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 1rem'><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout3.gif</span></span><img src='./@file/15581-813195-gsyTZVl6.gif' /></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout4.gif</span></span><img src='./@file/27630-813195-BKMpBsl1.gif' /></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout5.gif</span></span><img src='./@file/12700-813195-FNIeCDeU.gif' /></div></div></div>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
