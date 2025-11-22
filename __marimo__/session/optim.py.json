@@ -1,0 +1,73 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.18.0"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZnXv",
+      "code_hash": "28d541bec72b976839f950ba7692a176",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"model-optimization\">Model optimization</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Zbax",
+      "code_hash": "4e35a0ef16aa579ffe73fc791af3cdf9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PUDh",
+      "code_hash": "cfaefbb29d4a3838603af6c4403b403e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/torchrl/objectives/common.py:40: UserWarning: No target network updater has been associated with this loss module, but target parameters have been found. While this is supported, it is expected that the target network updates will be manually performed. You can deactivate this warning by turning the RL_WARNINGS env variable to False.\n  warnings.warn(\n/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/torchrl/objectives/common.py:456: UserWarning: No target network updater has been associated with this loss module, but target parameters have been found. While this is supported, it is expected that the target network updates will be manually performed. You can deactivate this warning by turning the RL_WARNINGS env variable to False.\n  warnings.warn(\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TensorDict(\n    fields={\n        loss_actor: Tensor(shape=torch.Size([]), device=cpu, dtype=torch.float32, is_shared=False),\n        loss_value: Tensor(shape=torch.Size([]), device=cpu, dtype=torch.float32, is_shared=False),\n        pred_value: Tensor(shape=torch.Size([100]), device=cpu, dtype=torch.float32, is_shared=False),\n        pred_value_max: Tensor(shape=torch.Size([]), device=cpu, dtype=torch.float32, is_shared=False),\n        target_value: Tensor(shape=torch.Size([100]), device=cpu, dtype=torch.float32, is_shared=False),\n        target_value_max: Tensor(shape=torch.Size([]), device=cpu, dtype=torch.float32, is_shared=False),\n        td_error: Tensor(shape=torch.Size([100]), device=cpu, dtype=torch.float32, is_shared=False)},\n    batch_size=torch.Size([]),\n    device=None,\n    is_shared=False)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    }
+  ]
+}

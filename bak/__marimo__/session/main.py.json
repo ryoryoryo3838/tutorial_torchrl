@@ -1,0 +1,124 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.18.0"
+  },
+  "cells": [
+    {
+      "id": "MJUe",
+      "code_hash": "eb1c4f87b688e5a1afd2a9971e0d4c13",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"_1\">\u30e1\u30a4\u30f3</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "6ed209e736c2814e5b9b042beee262c0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"_1\">\u63cf\u753b\u7528\u30b3\u30fc\u30c9</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "38a18e30695a48caadeaf0cda21cbb85",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/torchrl/__init__.py:48: UserWarning: failed to set start method to spawn, and current start method for mp is fork.\n  warn(\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TensorDict(\n    fields={\n        RGB: Tensor(shape=torch.Size([10, 144, 192, 3]), device=cpu, dtype=torch.uint8, is_shared=False),\n        agents: TensorDict(\n            fields={\n                action: Tensor(shape=torch.Size([10, 7]), device=cpu, dtype=torch.int64, is_shared=False),\n                logits: Tensor(shape=torch.Size([10, 7, 7]), device=cpu, dtype=torch.float32, is_shared=False),\n                observation: TensorDict(\n                    fields={\n                        RGB: Tensor(shape=torch.Size([10, 7, 3, 88, 88]), device=cpu, dtype=torch.float32, is_shared=False),\n                        vector_obs: Tensor(shape=torch.Size([10, 7, 2]), device=cpu, dtype=torch.float32, is_shared=False)},\n                    batch_size=torch.Size([10, 7]),\n                    device=None,\n                    is_shared=False)},\n            batch_size=torch.Size([10, 7]),\n            device=None,\n            is_shared=False),\n        done: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n        next: TensorDict(\n            fields={\n                RGB: Tensor(shape=torch.Size([10, 144, 192, 3]), device=cpu, dtype=torch.uint8, is_shared=False),\n                agents: TensorDict(\n                    fields={\n                        observation: TensorDict(\n                            fields={\n                                RGB: Tensor(shape=torch.Size([10, 7, 3, 88, 88]), device=cpu, dtype=torch.float32, is_shared=False),\n                                vector_obs: Tensor(shape=torch.Size([10, 7, 2]), device=cpu, dtype=torch.float32, is_shared=False)},\n                            batch_size=torch.Size([10, 7]),\n                            device=None,\n                            is_shared=False),\n                        reward: Tensor(shape=torch.Size([10, 7, 1]), device=cpu, dtype=torch.float64, is_shared=False)},\n                    batch_size=torch.Size([10, 7]),\n                    device=None,\n                    is_shared=False),\n                done: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n                terminated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False)},\n            batch_size=torch.Size([10]),\n            device=None,\n            is_shared=False),\n        terminated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False)},\n    batch_size=torch.Size([10]),\n    device=None,\n    is_shared=False)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "6a9847fd32602ddb4130f237963e27e8",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "1eef40873df9317d5f3927fe266c5c1d",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "80c4899b03916c801bab6118760dd5eb",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "a379bc5a8fb725bd00c3a233ccc623bc",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<img src='./@file/54197-878571-f77hc0fm.gif' />"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Video Data Shape: (10, 144, 192, 3)\nVideo Data Range: 0 - 255\nVideo Data Type:  uint8\nSaved to rollout.gif\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "6111f6e29f4e49f5241d19f535214407",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 1rem'><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Global View</span></span><img src='./@file/54197-878571-z9am3fRU.gif' /></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 1rem'><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout0.gif</span></span><img src='./@file/38293-878571-2xWyw5wR.gif' /></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout1.gif</span></span><img src='./@file/37395-878571-NHtWH4Vt.gif' /></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout2.gif</span></span><img src='./@file/42432-878571-bmyNw1jh.gif' /></div></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 1rem'><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout3.gif</span></span><img src='./@file/15581-878571-kmlLhMMI.gif' /></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout4.gif</span></span><img src='./@file/27630-878571-EY4wUn7u.gif' /></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout5.gif</span></span><img src='./@file/12700-878571-W6zMI3kq.gif' /></div></div></div>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}

@@ -11,4 +11,5 @@ dependencies = [
     "marimo>=0.18.0",
     "tensordict>=0.10.0",
     "torchrl>=0.10.1",
+    "ty>=0.0.1a27",
 ]

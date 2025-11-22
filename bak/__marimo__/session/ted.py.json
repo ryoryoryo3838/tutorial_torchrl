@@ -1,0 +1,133 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.18.0"
+  },
+  "cells": [
+    {
+      "id": "MJUe",
+      "code_hash": "8666abbdbf6d550a2886525325ad209a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"torchrl\">TorchRL</h1>\n<h2 id=\"get-started-with-environments-ted-and-transforms\">Get started with environments, TED and transforms</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "0383ccb33604166ebceda284ca4b5046",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">\u3042\u3089\u304b\u3058\u3081\u516c\u5f0f\u304c\u6709\u540d\u306a\u74b0\u5883\u306ewrapper\u3092\u63d0\u4f9b\u3057\u3066\u3044\u308b</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "4ca4d87c7ffe37c65fc3a41915dd2cda",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">\u74b0\u5883\u306f\u3001\u884c\u52d5\u3092\u5165\u529b\u3068\u3057\u3066\u53d7\u53d6\u3001\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u306b\u89b3\u6e2c\u3092\u4e0e\u3048\u30e1\u30bf\u30c7\u30fc\u30bf\u3092\u51fa\u529b\u3059\u308b\u3082\u306e\u3068\u3057\u3066\u8f9e\u66f8\u5f62\u5f0f\u3067\u6349\u3048\u3089\u308c\u308b</span>\n<span class=\"paragraph\">\u74b0\u5883<code>env</code>\u3067\u91cd\u8981\u306a\u30e1\u30bd\u30c3\u30c9\u304c<code>reset()</code>\u3068<code>step()</code>\u3067\u3042\u308b</span>\n<ul>\n<li><code>reset()</code>\u306f\u74b0\u5883\u306e\u521d\u671f\u5316\u3092\u884c\u3044\u3001\u521d\u671f\u89b3\u6e2c\u3092\u8fd4\u3059</li>\n<li><code>step(action)</code>\u306f\u74b0\u5883\u306b\u884c\u52d5<code>action</code>\u3092\u4e0e\u3048\u3001\u6b21\u306e\u89b3\u6e2c\u3001\u5831\u916c\u3001\u7d42\u4e86\u60c5\u5831\u306a\u3069\u3092\u8fd4\u3059)</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "ce8071d268a99c033438bb32a1e23576",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\"><code>MeltingPot</code>\u74b0\u5883\u306b\u304a\u3051\u308b\u74b0\u5883\u306e\u51fa\u529b\u30e1\u30bf\u30c7\u30fc\u30bf\u3068\u306f\u3069\u306e\u3088\u3046\u306a\u3082\u306e\u304b\n<code>reset()</code>\u3067\u4e0e\u3048\u3089\u308c\u308b\u521d\u671f\u89b3\u6e2c\u3092\u5206\u89e3\u3057\u3066\u898b\u3066\u3044\u304f</span>\n<ul>\n<li>\n<span class=\"paragraph\">fields</span>\n<ul>\n<li>RGB: \u30de\u30c3\u30d7\u306e\u5168\u4f53\u306e\u5404\u30d4\u30af\u30bb\u30eb\u3092\u683c\u7d0d\u3057\u305f\u30c6\u30f3\u30bd\u30eb</li>\n<li>\n<span class=\"paragraph\">agents: \u5404\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u306e\u74b0\u5883\u3078\u306e\u60c5\u5831</span>\n<ul>\n<li>\n<span class=\"paragraph\">fields</span>\n<ul>\n<li>action: \u74b0\u5883\u3078\u4f5c\u7528\u3067\u304d\u308b\u884c\u52d5\u306e\u30ea\u30b9\u30c8\uff084\u65b9\u5411\u79fb\u52d5\uff0b\u65b9\u5411\u8ee2\u63db+\u30d3\u30fc\u30e0\uff1f\uff09</li>\n<li>\n<span class=\"paragraph\">observation: \u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u306e\u77e5\u308a\u3046\u308b\u74b0\u5883\u306e\u60c5\u5831</span>\n<ul>\n<li>\n<span class=\"paragraph\">fields:</span>\n<ul>\n<li>COLLECTIVE_REWARD: \u53ce\u96c6\u3057\u3066\u304d\u305f\u5831\u916c</li>\n<li>READY_TO_SHOOT: \u30d3\u30fc\u30e0\u3092\u6253\u3066\u308b\u304b\u5426\u304b\uff08\u30ea\u30ed\u30fc\u30c9\u3068\u304b\u306e\u554f\u984c\uff1f\uff09</li>\n<li>RGB: \u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u306e\u89b3\u6e2c\u3057\u305f\u74b0\u5883\u30de\u30c3\u30d7\uff1f\uff08\u306b\u3057\u3066\u306f\u5c11\u306a\u3044\u304b\uff1f\uff09</li>\n</ul>\n</li>\n<li>batch_size</li>\n<li>device</li>\n<li>is_shared</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>batch_size</li>\n<li>device</li>\n<li>is_shared</li>\n</ul>\n</li>\n<li>done: \u6709\u9650\u30db\u30e9\u30a4\u30be\u30f3\u3067\u3042\u3063\u305f\u5834\u5408\u306e\u7d42\u4e86\u5224\u5b9a</li>\n<li>\n<span class=\"paragraph\">next: \u521d\u671f\u72b6\u614b\u4ee5\u5916\u3067\u767b\u5834\u3059\u308b\u3002</span>\n<ul>\n<li>fields: ~</li>\n</ul>\n</li>\n<li>terminated: \u3053\u308c\u3082\u308f\u304b\u3089\u306a\u3044</li>\n</ul>\n</li>\n<li>batch_size</li>\n<li>device</li>\n<li>is_shared</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "e181efcf155eef21719f37511de1f32f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "67641edc1a3861d753288d1e44d27c6b",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "14f957bf21e09091f20b0d2eca58d65f",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "244241f181471cdf1606170f7b4a46c6",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "bd1ef7fa77364a0050491f4f80738469",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "79c270a9b7c9d21dc20ca7d785857835",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "ec0d4ba5f824e67e8f170914d4beabe4",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "4be7fb90c033c35bb11af414be4bb147",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "df4440a380be5026e8497a162e835878",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "df848c483d4bbddcb629725ab7574278",
+      "outputs": [],
+      "console": []
+    }
+  ]
+}

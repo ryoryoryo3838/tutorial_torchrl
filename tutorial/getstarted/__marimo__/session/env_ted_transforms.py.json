@@ -1,0 +1,370 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.18.0"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "wklK",
+      "code_hash": "001d9eddaeb98dbb33a1547a3a82fecd",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "CDpw",
+      "code_hash": "9c60bf96c27e6c0b1d7b38184d19c1e9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">\u74b0\u5883\u306e\u4f5c\u6210</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "LJDb",
+      "code_hash": "01aacfe395238fdf809274a8996d00cb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "adRU",
+      "code_hash": "3ecb26e2099cd1c83ff45232cbc828b5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">\u74b0\u5883\u3092\u52d5\u304b\u3059</span>\n<ul>\n<li>TorchRL\u3067\u306f\u3001\u74b0\u5883\u306e\u72b6\u614b\u306fTensorDict\u5f62\u5f0f\u3067\u51fa\u529b\u3055\u308c\u308b</li>\n<li><code>reset()</code>: \u74b0\u5883\u306e\u521d\u671f\u72b6\u614b\u3092\u8fd4\u3059</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "dkHl",
+      "code_hash": "1ef8370142cef7a93c197293c448caca",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TensorDict(\n    fields={\n        done: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n        observation: Tensor(shape=torch.Size([3]), device=cpu, dtype=torch.float32, is_shared=False),\n        terminated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n        truncated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False)},\n    batch_size=torch.Size([]),\n    device=None,\n    is_shared=False)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "kGjl",
+      "code_hash": "bc446541fb3dbd4c540c878e941a3fc4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><ul>\n<li><code>rand_action(reset)</code>: \u4f5c\u6210\u3057\u305f\u72b6\u614b\u306b\u5bfe\u3057\u3066\u30e9\u30f3\u30c0\u30e0\u306a\u884c\u52d5\u3092\u5b9f\u884c</li>\n<li><code>reset()</code>\u304c\u521d\u671f\u72b6\u614b\u3001<code>rand_action()</code>\u3067\u6b21\u306e\u9077\u79fb\u306b\u304b\u304b\u308b\u884c\u52d5<code>action</code>\u304c\u30bb\u30c3\u30c8\u3055\u308c\u308b</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "VCAt",
+      "code_hash": "40c2bc076ee3e912ef1616cd27e77094",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TensorDict(\n    fields={\n        action: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.float32, is_shared=False),\n        done: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n        observation: Tensor(shape=torch.Size([3]), device=cpu, dtype=torch.float32, is_shared=False),\n        terminated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n        truncated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False)},\n    batch_size=torch.Size([]),\n    device=None,\n    is_shared=False)\n------\ntensor([1.7842])\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "yyGK",
+      "code_hash": "914aaf91ee53d552b402b78de5973f48",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><ul>\n<li><code>step()</code>: \u30bb\u30c3\u30c8\u3055\u308c\u305f\u884c\u52d5\u3092\u5b9f\u884c\u3002\u6b21\u306e\u72b6\u614b<code>next</code>\u3092\u4f5c\u6210</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Cijn",
+      "code_hash": "79c270a9b7c9d21dc20ca7d785857835",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TensorDict(\n    fields={\n        action: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.float32, is_shared=False),\n        done: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n        next: TensorDict(\n            fields={\n                done: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n                observation: Tensor(shape=torch.Size([3]), device=cpu, dtype=torch.float32, is_shared=False),\n                reward: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.float32, is_shared=False),\n                terminated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n                truncated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False)},\n            batch_size=torch.Size([]),\n            device=None,\n            is_shared=False),\n        observation: Tensor(shape=torch.Size([3]), device=cpu, dtype=torch.float32, is_shared=False),\n        terminated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n        truncated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False)},\n    batch_size=torch.Size([]),\n    device=None,\n    is_shared=False)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "qymH",
+      "code_hash": "c6c32a851a3d94b51803bb089f5c9ee1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><ul>\n<li><code>next</code>\u306e\u72b6\u614b\u306b\u9077\u79fb\u3059\u308b\u306b\u306f<code>step_mdp()</code>\u306a\u3069\u3092\u7528\u3044\u308b</li>\n<li>\u3064\u307e\u308a\u3001<code>reset()</code>\u2192<code>rand_action()</code>\u306a\u3069\u2192<code>step()</code>\u2192<code>step_mdp()</code>\u2192<code>rand_action()</code>\u306a\u3069\u3068\u3044\u3046\u306e\u304crollout\u306e\u6d41\u308c</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "YDzc",
+      "code_hash": "89152588e70809fb7ea118f277cb9798",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TensorDict(\n    fields={\n        done: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n        observation: Tensor(shape=torch.Size([3]), device=cpu, dtype=torch.float32, is_shared=False),\n        terminated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n        truncated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False)},\n    batch_size=torch.Size([]),\n    device=None,\n    is_shared=False)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "tnlB",
+      "code_hash": "3104d2ff935a13ede480b920272c6174",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">\u74b0\u5883\u306erollout</span>\n<ul>\n<li>\u4e0a\u3067\u898b\u305f\u4e00\u9023\u306e\u30eb\u30fc\u30d7\u3092\u307e\u3068\u3081\u3066\u3084\u3063\u3066\u304f\u308c\u308b\u306e\u304c<code>rottlout()</code>\u3067\u3042\u308b</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MeVV",
+      "code_hash": "4be7fb90c033c35bb11af414be4bb147",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TensorDict(\n    fields={\n        action: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.float32, is_shared=False),\n        done: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n        next: TensorDict(\n            fields={\n                done: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n                observation: Tensor(shape=torch.Size([10, 3]), device=cpu, dtype=torch.float32, is_shared=False),\n                reward: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.float32, is_shared=False),\n                terminated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n                truncated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False)},\n            batch_size=torch.Size([10]),\n            device=None,\n            is_shared=False),\n        observation: Tensor(shape=torch.Size([10, 3]), device=cpu, dtype=torch.float32, is_shared=False),\n        terminated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n        truncated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False)},\n    batch_size=torch.Size([10]),\n    device=None,\n    is_shared=False)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "PfAJ",
+      "code_hash": "a734fd2ac48afd4ec4b09dcb64493d32",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><ul>\n<li>rollout\u3067\u306f\u904e\u53bb\u306estep\u3082\u30c6\u30f3\u30bd\u30eb\u3068\u3057\u3066\u4fdd\u5b58\u3055\u308c\u3066\u3044\u308b\u306e\u3067\u904e\u53bb\u306e\u72b6\u614b\u3092\u898b\u308b\u3053\u3068\u304c\u3067\u304d\u308b</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "fzoo",
+      "code_hash": "691b74ed2fd390daae9d20b3673d6a08",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TensorDict(\n    fields={\n        action: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.float32, is_shared=False),\n        done: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n        next: TensorDict(\n            fields={\n                done: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n                observation: Tensor(shape=torch.Size([3]), device=cpu, dtype=torch.float32, is_shared=False),\n                reward: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.float32, is_shared=False),\n                terminated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n                truncated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False)},\n            batch_size=torch.Size([]),\n            device=None,\n            is_shared=False),\n        observation: Tensor(shape=torch.Size([3]), device=cpu, dtype=torch.float32, is_shared=False),\n        terminated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False),\n        truncated: Tensor(shape=torch.Size([1]), device=cpu, dtype=torch.bool, is_shared=False)},\n    batch_size=torch.Size([]),\n    device=None,\n    is_shared=False)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "Zesb",
+      "code_hash": "61308d1d82664dbcdcffa2ebbbfd75eb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">\u74b0\u5883\u306e\u5909\u63db</span>\n<ul>\n<li>\u74b0\u5883\u60c5\u5831\u306e\u5909\u63db\u306f\u3001\u51fa\u529b\u306eTensorDict\u306e\u5f62\u5f0f\u3092\u5909\u66f4\u3059\u308b\u3053\u3068\u3067\u884c\u3046</li>\n<li>\u30b9\u30c6\u30c3\u30d7\u6570\u3092\u8a18\u61b6\u3059\u308b\u3088\u3046\u306b\u5909\u63db\u3057\u305f\u4f8b\u304c\u4ee5\u4e0b</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "xJce",
+      "code_hash": "97775fbe61e6ef509be6e6b8bcccd060",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TensorDict(\n    fields={\n        action: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.float32, is_shared=False),\n        done: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n        next: TensorDict(\n            fields={\n                done: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n                observation: Tensor(shape=torch.Size([10, 3]), device=cpu, dtype=torch.float32, is_shared=False),\n                reward: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.float32, is_shared=False),\n                step_count: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.int64, is_shared=False),\n                terminated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n                truncated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False)},\n            batch_size=torch.Size([10]),\n            device=None,\n            is_shared=False),\n        observation: Tensor(shape=torch.Size([10, 3]), device=cpu, dtype=torch.float32, is_shared=False),\n        step_count: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.int64, is_shared=False),\n        terminated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n        truncated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False)},\n    batch_size=torch.Size([10]),\n    device=None,\n    is_shared=False)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "luUn",
+      "code_hash": "5264c98d117c70541458003439a3c2fd",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><ul>\n<li>StepCounter\u3068rollout\u306emax_steps\u304c\u7570\u306a\u308b\u5834\u5408\u3001\u5c11\u306a\u3044\u65b9\u306b\u5408\u308f\u305b\u3089\u308c\u308b\u3002\u305d\u306e\u5834\u5408\u3001\u9014\u4e2d\u3067rollout\u304c\u6253\u3061\u5207\u3089\u308c\u305f\u3068\u307f\u306a\u3055\u308c\u3001trancated\u304ctrue\u3092\u8fd4\u3059</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "xDOW",
+      "code_hash": "b1d74a8ea2e5b5016b65c587dba3b11b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "tensor([[False],\n        [False],\n        [False],\n        [False],\n        [False],\n        [False],\n        [False],\n        [False],\n        [False],\n        [ True]])\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "pKlM",
+      "code_hash": "e8500a10bd7942b712457aacded99ad8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">\u6700\u5f8c\u306bmeltingpot\u7248\u306e\u74b0\u5883\u306b\u3064\u3044\u3066\u3082\u898b\u3066\u304a\u304f</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "CPrB",
+      "code_hash": "120eb2217f8b5eb4c1bc11b1e4a872c0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TensorDict(\n    fields={\n        RGB: Tensor(shape=torch.Size([10, 144, 192, 3]), device=cpu, dtype=torch.uint8, is_shared=False),\n        agents: TensorDict(\n            fields={\n                action: Tensor(shape=torch.Size([10, 7]), device=cpu, dtype=torch.int64, is_shared=False),\n                observation: TensorDict(\n                    fields={\n                        COLLECTIVE_REWARD: Tensor(shape=torch.Size([10, 7, 1]), device=cpu, dtype=torch.float64, is_shared=False),\n                        READY_TO_SHOOT: Tensor(shape=torch.Size([10, 7, 1]), device=cpu, dtype=torch.float64, is_shared=False),\n                        RGB: Tensor(shape=torch.Size([10, 7, 88, 88, 3]), device=cpu, dtype=torch.uint8, is_shared=False)},\n                    batch_size=torch.Size([10, 7]),\n                    device=None,\n                    is_shared=False)},\n            batch_size=torch.Size([10, 7]),\n            device=None,\n            is_shared=False),\n        done: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n        next: TensorDict(\n            fields={\n                RGB: Tensor(shape=torch.Size([10, 144, 192, 3]), device=cpu, dtype=torch.uint8, is_shared=False),\n                agents: TensorDict(\n                    fields={\n                        observation: TensorDict(\n                            fields={\n                                COLLECTIVE_REWARD: Tensor(shape=torch.Size([10, 7, 1]), device=cpu, dtype=torch.float64, is_shared=False),\n                                READY_TO_SHOOT: Tensor(shape=torch.Size([10, 7, 1]), device=cpu, dtype=torch.float64, is_shared=False),\n                                RGB: Tensor(shape=torch.Size([10, 7, 88, 88, 3]), device=cpu, dtype=torch.uint8, is_shared=False)},\n                            batch_size=torch.Size([10, 7]),\n                            device=None,\n                            is_shared=False),\n                        reward: Tensor(shape=torch.Size([10, 7, 1]), device=cpu, dtype=torch.float64, is_shared=False)},\n                    batch_size=torch.Size([10, 7]),\n                    device=None,\n                    is_shared=False),\n                done: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False),\n                terminated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False)},\n            batch_size=torch.Size([10]),\n            device=None,\n            is_shared=False),\n        terminated: Tensor(shape=torch.Size([10, 1]), device=cpu, dtype=torch.bool, is_shared=False)},\n    batch_size=torch.Size([10]),\n    device=None,\n    is_shared=False)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "TqgB",
+      "code_hash": "48180dc66f455d8d630660bba226ed5c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><ul>\n<li>\u7279\u7b46\u3059\u3079\u304d\u306f\u3001MARL\u74b0\u5883\u306a\u306e\u3067\u3001\u5358\u306b\u30de\u30c3\u30d7\u74b0\u5883\u306e\u4e2d\u306b\u89b3\u6e2c\u304c\u3042\u308b\u306e\u3067\u306f\u306a\u304f\u3001\u74b0\u5883\u306e\u4e2d\u306b\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u3054\u3068\u306e\u89b3\u6e2c\u3084\u5831\u916c\u304c\u3042\u308b\u3068\u3044\u3046\u70b9</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}

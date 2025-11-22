@@ -19,12 +19,12 @@
     },
     {
       "id": "MJUe",
-      "code_hash": "cd773bc5066a661b72db67de3752f94d",
+      "code_hash": "eb1c4f87b688e5a1afd2a9971e0d4c13",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"get-started-with-torchs-modules\">Get started with Torch's modules</h2></span>"
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"_1\">\u30e1\u30a4\u30f3</h2></span>"
           }
         }
       ],
@@ -32,7 +32,7 @@
     },
     {
       "id": "vblA",
-      "code_hash": "977a3c9673be0b8a5a94893a2656dc2d",
+      "code_hash": "38a18e30695a48caadeaf0cda21cbb85",
       "outputs": [
         {
           "type": "data",
@@ -51,36 +51,81 @@
       ]
     },
     {
-      "id": "xImu",
-      "code_hash": "abcff169c5486e399804c6eb38298e86",
+      "id": "PqWU",
+      "code_hash": "6a9847fd32602ddb4130f237963e27e8",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/html": "<img src='./@file/57454-813195-MlqIh7wC.gif' />"
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "gvIy",
+      "code_hash": "aca190f7c402717a163ebac442abfd11",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
           }
         }
       ],
       "console": [
         {
           "type": "stream",
-          "name": "stdout",
-          "text": "Video Data Shape: (10, 144, 192, 3)\nVideo Data Range: 0 - 255\nVideo Data Type:  uint8\nSaved to rollout.gif\n",
+          "name": "stderr",
+          "text": "/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/torchrl/objectives/ppo.py:511: DeprecationWarning: 'entropy_coef' is deprecated and will be removed in torchrl v0.11. Please use 'entropy_coeff' instead.\n  warnings.warn(\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "SWHO",
-      "code_hash": "6111f6e29f4e49f5241d19f535214407",
+      "id": "Vmfq",
+      "code_hash": "cd0edc12f2a0e2090dbbc97c5cee7901",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "CUDA out of memory. Tried to allocate 312.00 MiB. GPU 0 has a total capacity of 7.61 GiB of which 113.94 MiB is free. Including non-PyTorch memory, this process has 6.96 GiB memory in use. Of the allocated memory 6.62 GiB is allocated by PyTorch, and 214.10 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+          "traceback": []
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/tmp/marimo_834973/__marimo__cell_Vmfq_.py&quot;</span>, line <span class=\"m\">11</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"k\">for</span> <span class=\"n\">i</span><span class=\"p\">,</span> <span class=\"n\">tensordict_data</span> <span class=\"ow\">in</span> <span class=\"nb\">enumerate</span><span class=\"p\">(</span><span class=\"n\">collector</span><span class=\"p\">):</span>\n  File <span class=\"nb\">&quot;/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/torchrl/collectors/collectors.py&quot;</span>, line <span class=\"m\">343</span>, in <span class=\"n\">__iter__</span>\n<span class=\"w\">    </span><span class=\"k\">yield from</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">iterator</span><span class=\"p\">()</span>\n  File <span class=\"nb\">&quot;/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/torchrl/collectors/collectors.py&quot;</span>, line <span class=\"m\">1307</span>, in <span class=\"n\">iterator</span>\n<span class=\"w\">    </span><span class=\"k\">yield</span> <span class=\"n\">tensordict_out</span><span class=\"o\">.</span><span class=\"n\">clone</span><span class=\"p\">()</span>\n<span class=\"w\">          </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/tensordict/base.py&quot;</span>, line <span class=\"m\">12497</span>, in <span class=\"n\">clone</span>\n<span class=\"w\">    </span><span class=\"n\">result</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_clone</span><span class=\"p\">(</span><span class=\"n\">recurse</span><span class=\"o\">=</span><span class=\"n\">recurse</span><span class=\"p\">,</span> <span class=\"o\">**</span><span class=\"n\">kwargs</span><span class=\"p\">)</span>\n<span class=\"w\">             </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/tensordict/_td.py&quot;</span>, line <span class=\"m\">3263</span>, in <span class=\"n\">_clone</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_clone_recurse</span><span class=\"p\">()</span>\n<span class=\"w\">           </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/tensordict/base.py&quot;</span>, line <span class=\"m\">10733</span>, in <span class=\"n\">_clone_recurse</span>\n<span class=\"w\">    </span><span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">_foreach_add</span><span class=\"p\">(</span><span class=\"nb\">tuple</span><span class=\"p\">(</span><span class=\"n\">foreach_vals</span><span class=\"o\">.</span><span class=\"n\">values</span><span class=\"p\">()),</span> <span class=\"mi\">0</span><span class=\"p\">),</span>\n<span class=\"w\">    </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n<span class=\"gr\">torch.OutOfMemoryError</span>: <span class=\"n\">CUDA out of memory. Tried to allocate 312.00 MiB. GPU 0 has a total capacity of 7.61 GiB of which 113.94 MiB is free. Including non-PyTorch memory, this process has 6.96 GiB memory in use. Of the allocated memory 6.62 GiB is allocated by PyTorch, and 214.10 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
+      "id": "QyoY",
+      "code_hash": "6ed209e736c2814e5b9b042beee262c0",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 1rem'><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Global View</span></span><img src='./@file/57454-813195-cmso4L4p.gif' /></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 1rem'><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout0.gif</span></span><img src='./@file/38293-813195-1T4EnDMH.gif' /></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout1.gif</span></span><img src='./@file/37395-813195-DW7lt8IL.gif' /></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout2.gif</span></span><img src='./@file/42432-813195-1PZrfVQW.gif' /></div></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 1rem'><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout3.gif</span></span><img src='./@file/15581-813195-gsyTZVl6.gif' /></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout4.gif</span></span><img src='./@file/27630-813195-BKMpBsl1.gif' /></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: center;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Agent rollout5.gif</span></span><img src='./@file/12700-813195-FNIeCDeU.gif' /></div></div></div>"
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"_1\">\u63cf\u753b\u7528\u30b3\u30fc\u30c9</h2></span>"
           }
         }
       ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "a379bc5a8fb725bd00c3a233ccc623bc",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "6111f6e29f4e49f5241d19f535214407",
+      "outputs": [],
       "console": []
     }
   ]

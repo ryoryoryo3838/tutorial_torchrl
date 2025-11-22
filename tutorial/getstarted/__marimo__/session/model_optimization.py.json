@@ -1,0 +1,165 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.18.0"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "bf1600cd575a84da52a132382be36ebc",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nkCX",
+      "code_hash": "96c1caa33e4fc1587cca859b9def865a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">\u3053\u3053\u3067\u306f\u5177\u4f53\u7684\u306a\u65b9\u7b56\u5b66\u7fd2\u306e\u5b9f\u88c5\u3092\u898b\u3066\u3044\u304f</span>\n<ul>\n<li>\u5b66\u7fd2\u306f\u4e3b\u306b\u4ee5\u4e0b\u306e\u624b\u9806\u3067\u9032\u3080</li>\n</ul>\n<ol>\n<li>\u74b0\u5883\u3068\u65b9\u7b56\u304b\u3089\u6b21\u306e\u30d0\u30c3\u30c1\u3092\u53d6\u5f97\u3059\u308b</li>\n<li>\u53d6\u5f97\u30c7\u30fc\u30bf\u306e\u640d\u5931\u8a08\u7b97\u3092\u884c\u3044\u9006\u4f1d\u64ad</li>\n<li>\u305d\u308c\u306b\u57fa\u3065\u304d\u91cd\u307f\u6700\u9069\u5316\u3002</li>\n<li>2,3\u306e\u30eb\u30fc\u30d7\u3092\uff11\u30d0\u30c3\u30c1\u3042\u305f\u308a\u306e\u8a13\u7df4\u56de\u6570\u5206\u7e70\u308a\u8fd4\u3059</li>\n</ol></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "QwiA",
+      "code_hash": "1d0d0424422385001910a9c66d26fcf4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "tKrT",
+      "code_hash": "34bfdfe44d03c5c38d5291b0b08fdadf",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/torchrl/objectives/common.py:40: UserWarning: No target network updater has been associated with this loss module, but target parameters have been found. While this is supported, it is expected that the target network updates will be manually performed. You can deactivate this warning by turning the RL_WARNINGS env variable to False.\n  warnings.warn(\n/home/miyax/Documents/Python/tankyu/tutorial_torchrl/.venv/lib/python3.11/site-packages/torchrl/objectives/common.py:456: UserWarning: No target network updater has been associated with this loss module, but target parameters have been found. While this is supported, it is expected that the target network updates will be manually performed. You can deactivate this warning by turning the RL_WARNINGS env variable to False.\n  warnings.warn(\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TensorDict(\n    fields={\n        loss_actor: Tensor(shape=torch.Size([]), device=cpu, dtype=torch.float32, is_shared=False),\n        loss_value: Tensor(shape=torch.Size([]), device=cpu, dtype=torch.float32, is_shared=False),\n        pred_value: Tensor(shape=torch.Size([100]), device=cpu, dtype=torch.float32, is_shared=False),\n        pred_value_max: Tensor(shape=torch.Size([]), device=cpu, dtype=torch.float32, is_shared=False),\n        target_value: Tensor(shape=torch.Size([100]), device=cpu, dtype=torch.float32, is_shared=False),\n        target_value_max: Tensor(shape=torch.Size([]), device=cpu, dtype=torch.float32, is_shared=False),\n        td_error: Tensor(shape=torch.Size([100]), device=cpu, dtype=torch.float32, is_shared=False)},\n    batch_size=torch.Size([]),\n    device=None,\n    is_shared=False)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "Rwce",
+      "code_hash": "32333bef42c2be3265573701b136b8bb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">\u640d\u5931\u95a2\u6570\u306e\u51fa\u529b\u306f\u591a\u5c90\u306b\u308f\u305f\u308b\u3002\u7279\u5225\u306a\u91cd\u307f\u4ed8\u3051\u3092\u3057\u306a\u3044\u306a\u3089\u3070\u3053\u308c\u3089\u3092\u307e\u3068\u3081\u305f\u30c8\u30fc\u30bf\u30eb\u306a\u640d\u5931\u3092\u8a08\u7b97\u3059\u308b\u3068\u3088\u3044</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "YKPc",
+      "code_hash": "adb61fd5abdb82e0ac35113ddb6e18b2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "tensor(57.7448, grad_fn=<AddBackward0>)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "FnzL",
+      "code_hash": "fa82cb233acb217a08c63ffcf901bb68",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">\u640d\u5931\u8a08\u7b97\u306e\u6b21\u306f\u305d\u308c\u3092\u7528\u3044\u305f\u30d0\u30c3\u30af\u30d7\u30ed\u30d1\u30b2\u30fc\u30b7\u30e7\u30f3\u3068\u91cd\u307f\u66f4\u65b0\u3067\u3042\u308b</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZlVE",
+      "code_hash": "fbc9b1de81ff5178a409661a23d39b24",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "wNXT",
+      "code_hash": "d6d4bd6f3038b182dde0d0bba463ec5d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">\u4e00\u56de\u306e\u66f4\u65b0\u3054\u3068\u306b\u5168\u91cd\u307f\u304c\u5909\u308f\u3063\u3066\u306f\u5b66\u7fd2\u304c\u4e0d\u5b89\u5b9a\u306b\u306a\u308b\u3002\u305d\u3053\u3067\u30bf\u30fc\u30b2\u30c3\u30c8NN\u3092\u7528\u610f\u3057\u3001\u305d\u308c\u3092\u5272\u5408\u7684\u306b\u5909\u66f4\u3057\u3066\u3044\u304f\u65b9\u6cd5\u3092\u3068\u308b\uff08PPO\u3067\u306f\u8003\u616e\u3059\u308b\u5fc5\u8981\u306f\u306a\u3044\u3002world model\u306e\u5834\u5408\u306f\u3053\u3046\u3044\u3046\u306e\u304c\u5927\u4e8b\u306b\u306a\u308b\u3063\u307d\u3044\uff09</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DykN",
+      "code_hash": "e28d1e281e6b413c6a3207779a9e3f72",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "tensor(57.7448, grad_fn=<AddBackward0>)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    }
+  ]
+}
